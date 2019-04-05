@@ -1,0 +1,104 @@
+
+.lettersLogoContainer h1{
+    color: black;      
+    font-family: 'Roboto', sans-serif;
+}
+
+#brosRed{
+    color: rgb(214, 0, 0);      
+}
+
+.header{
+    margin: 0;
+    padding: 0;   
+    display: flex;  
+    align-items: baseline;
+    align-content: center;    
+}
+
+.logo{
+    align-self: center;
+}
+
+.logo img
+{
+    min-width: 40px;  /* Or whatever */    
+    max-width: 75px;      
+}
+
+.lettersLogoContainer{    
+   display: flex;
+}
+
+.lettersLink{
+    text-decoration: none;   
+    padding-left: 0px; 
+}
+
+.navs{
+    padding: 20px;
+    padding-bottom: 10px;
+}
+ 
+.navs a{
+    color: gray;
+    text-decoration: none;    
+    margin-bottom: 0;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: color 0.5s ease;
+}
+
+.navs a:hover{
+    color: black;
+    border-bottom: 2px solid currentColor;           
+    transition: color 0.5s ease;
+}
+
+.socialNavIcons a{
+    margin: 0 -5px;    
+    width: 50px;
+    padding: 0px;
+}
+
+.socialNavIcons a:last-child{
+    margin-right: 5px;
+    width: 50px;
+    padding: 0px;
+}
+
+.socialNavIcons{
+    margin-left: auto;
+    align-self: center;
+}
+
+.logoInstaHeader{
+    margin-left: auto;
+    width: 50px;
+    color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    .letterLogo {
+      font-size: 35px;         
+    }
+
+    .header{                     
+        height: 60px;
+        width: 100%;             
+        align-items: center;             
+    }
+
+    .navs{
+       padding: 5px; 
+       padding-bottom: 0px;     
+    }
+
+    .logo img
+    {
+        width: 50px;
+        min-width: 50px;  /* Or whatever */    
+        max-width: 60px;      
+    }   
+
+  }
