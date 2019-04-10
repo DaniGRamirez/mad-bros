@@ -4,6 +4,10 @@ self.__precacheManifest = [
     "url": "/static/media/logoredandwhite.eab043a3.png"
   },
   {
+    "revision": "61d52a68cfb7c00c8a30a73c1937ce0f",
+    "url": "/static/media/foto-8.61d52a68.jpg"
+  },
+  {
     "revision": "391776efae76b37ea9ecbd2dcb343528",
     "url": "/static/media/LogoInstaInvertido.391776ef.png"
   },
@@ -16,23 +20,23 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "bf73f7ae9f2237ffcdeb",
-    "url": "/static/js/main.d9e0d695.chunk.js"
+    "revision": "9565953b0d40d2157c07",
+    "url": "/static/js/main.ae02c314.chunk.js"
   },
   {
-    "revision": "5a105fabc3143ca1d5bc",
-    "url": "/static/js/2.5527cc1c.chunk.js"
+    "revision": "7f7b94670e505a6d0615",
+    "url": "/static/js/2.b242bc5e.chunk.js"
   },
   {
-    "revision": "bf73f7ae9f2237ffcdeb",
-    "url": "/static/css/main.5667c5ae.chunk.css"
+    "revision": "9565953b0d40d2157c07",
+    "url": "/static/css/main.9990d5c7.chunk.css"
   },
   {
-    "revision": "5a105fabc3143ca1d5bc",
-    "url": "/static/css/2.c975d818.chunk.css"
+    "revision": "7f7b94670e505a6d0615",
+    "url": "/static/css/2.5f31d337.chunk.css"
   },
   {
-    "revision": "3a11cb855afdbd8d115c7589be07766d",
+    "revision": "181c0d02b77e9593c799cfd4ab4e3a97",
     "url": "/index.html"
   }
 ];
