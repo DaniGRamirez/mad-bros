@@ -48,7 +48,7 @@ constructor(props) {
       <div>
         <Header isDesktop={this.state.isDesktop}/>      
         {navBurguerMenu}
-        <Route exact path='/Home' component={Home}/> 
+        <Route exact path='/' component={Home}/> 
         <Route exact path='/Photos' component={PhotoGallery}/>        
         <Route exact path='/About' component={About}/>  
         <Route exact path='/Contact' component={SimpleContact}/>   

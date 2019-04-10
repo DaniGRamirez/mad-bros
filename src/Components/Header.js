@@ -43,11 +43,11 @@ class Header extends Component {
         <div className=" bg-light-gray">
             <div className= "header">                
                 <div className= "logo" >
-                    <Link to="/Home">
+                    <Link to="/">
                     <img className="" alt="logo" src = {logo}></img>
                     </Link>
                 </div>                 
-                <Link to="/Home" className="lettersLink">     
+                <Link to="/" className="lettersLink">     
                     <div className="lettersLogoContainer">
                         <h1 className='letterLogo'>Mad</h1>
                         <h1 className='letterLogo' id="brosRed">Bros</h1>

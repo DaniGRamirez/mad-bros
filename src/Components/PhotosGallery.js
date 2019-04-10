@@ -3,6 +3,9 @@ import Gallery from "react-photo-gallery";
 import Lightbox from 'react-images';
 import './PhotosGallery.css';
 import logoInstagram from '../img/LogoInstaBN.png';
+import sizeOf from 'image-size';
+// var sizeOf = require('image-size');
+
 
 const photos = [
     {
@@ -28,6 +31,42 @@ const photos = [
     }
   ];   
 
+  const selectedPhotos = []; 
+
+  function getSelectedPhotos()
+  {
+    let numberPhotos = 15;
+    for (let index = 0; index < numberPhotos; index++) {            
+      let indexPhoto = index+1;
+      selectedPhotos [index] = 
+      {
+        
+        src: '../img/' + "foto-" + indexPhoto + ".jpg",         
+        width: 3,
+        height: 2
+      }
+      // var dimensions = sizeOf('../img/LogoInstaBN.png');
+      // console.log(dimensions.width, dimensions.height);
+      // selectedPhotos[index].width = dimensions.width/1000;
+      // selectedPhotos[index].height = dimensions.height/1000;
+    }  
+
+    changeDimensions([0,3],2,3);
+    changeDimensions([1],1,1);
+    changeDimensions([5],1.2,1);    
+    console.log(selectedPhotos);
+    console.log("invoking getselected");
+  };
+
+  function changeDimensions(indexToChange,_width,_heigth)
+  {       
+    indexToChange.forEach((element)=>
+    {     
+      selectedPhotos[element].width = _width;
+      selectedPhotos[element].height = _heigth;      
+    });    
+  }  
+
 class GalleryTest extends Component {
 
   constructor() {
@@ -37,6 +76,7 @@ class GalleryTest extends Component {
     this.openLightbox = this.openLightbox.bind(this);
     this.gotoNext = this.gotoNext.bind(this);
     this.gotoPrevious = this.gotoPrevious.bind(this);
+    getSelectedPhotos();
   }
   openLightbox(event, obj) {
     this.setState({
@@ -64,8 +104,8 @@ class GalleryTest extends Component {
   render(){
       return(     
         <div className = "GalleryDiv">
-        <Gallery photos={photos}  columns="3" onClick={this.openLightbox} direction={"column"} />
-        <Lightbox images={photos}
+        <Gallery photos={selectedPhotos}  columns="3" onClick={this.openLightbox} direction={"column"} />
+        <Lightbox images={selectedPhotos}
           onClose={this.closeLightbox}
           onClickPrev={this.gotoPrevious}
           onClickNext={this.gotoNext}
