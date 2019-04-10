@@ -5,11 +5,13 @@
   "dependencies": {
     "image-size": "^0.7.3",
     "latest-version": "^5.0.0",
+    "nodemailer": "^6.1.0",
     "npm-install-peers": "^1.2.1",
     "react": "^16.8.3",
     "react-burger-menu": "^2.6.5",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
+    "react-hooks": "^1.0.1",
     "react-images": "^0.5.19",
     "react-instafeed": "^1.0.0",
     "react-instagram-embed": "^1.5.0",

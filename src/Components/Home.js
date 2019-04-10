@@ -1,18 +1,8 @@
 import React, {Component,Fragment} from 'react';
 import './Home.css';
 import photoMain from '../img/foto-8.jpg';
-import { buildUrl } from 'react-instafeed'
-
-const options = {
-  accessToken: 'access...',
-  clientId: 'client...',
-  get: 'user', // popular, user
-  locationId: null,
-  resolution: 'standard_resolution', // thumbnail, low_resolution, standard_resolution
-  sortBy: 'none', // none, least-commented, least-liked, least-recent, most-commented, most-liked, most-recent, random
-  tagName: null,
-  userId: 123,
-}
+import './InstaFeed';
+import InstaFeed from './InstaFeed';
 
 class Home extends Component {   
   
@@ -26,6 +16,7 @@ class Home extends Component {
                 <h1>"Too fast to live, too young to die"</h1>                         
             </div>
             <div className="powr-instagram-feed" id="d9174698_1553704120"></div>
+            <InstaFeed/>
         </div>        
           ); 
   }   
