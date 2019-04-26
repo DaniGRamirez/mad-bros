@@ -41,7 +41,7 @@ import sizeOf from 'image-size';
     AddPhotosInFolder("4_3",4,3,2);      
     AddPhotosInFolder("3_4",3,4,0);      
     AddPhotosInFolder("5_4",5,4,1);    
-    //shuffle(selectedPhotos);
+    shuffle(selectedPhotos);
     console.log(selectedPhotos);
     console.log("invoking getselected");
 
