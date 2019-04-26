@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './About.css';
-import photoDani from '../ImgUs/Dani.jpg';
-import photoMarcos from '../ImgUs/Marcos.jpg';
+import photoDani from '../img/Dani.jpg';
+import photoMarcos from '../img/Marcos.jpg';
 
 class About extends Component {   
 

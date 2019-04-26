@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/logoredandwhite.eab043a3.png"
   },
   {
-    "revision": "5f1525b51233f826f80a",
+    "revision": "dd0e6e9689f73340c184",
     "url": "/static/css/main.b1ba3367.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/static/media/LogoInstaInvertido.391776ef.png"
   },
   {
-    "revision": "5f1525b51233f826f80a",
-    "url": "/static/js/main.988c5eee.chunk.js"
+    "revision": "dd0e6e9689f73340c184",
+    "url": "/static/js/main.adfdb034.chunk.js"
   },
   {
     "revision": "61d52a68cfb7c00c8a30a73c1937ce0f",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.5f31d337.chunk.css"
   },
   {
-    "revision": "a2c9cef2b09a5c34f55f49934ef66d23",
+    "revision": "334f9234f596fd9a0eb3c691975062a6",
     "url": "/index.html"
   }
 ];
