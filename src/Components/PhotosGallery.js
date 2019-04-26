@@ -27,13 +27,21 @@ import sizeOf from 'image-size';
       }
     )
 
+    selectedPhotos.push(
+      {
+        src: '../img/' + "Foto2.jpg",         
+        width: 2,
+        height: 3
+      }
+    )
+
     AddPhotosInFolder("1_1",1,1,1);
     AddPhotosInFolder("3_2",3,2,12);
     AddPhotosInFolder("2_3",2,3,2);            
     AddPhotosInFolder("4_3",4,3,2);      
     AddPhotosInFolder("3_4",3,4,0);      
     AddPhotosInFolder("5_4",5,4,1);    
-    shuffle(selectedPhotos);
+    //shuffle(selectedPhotos);
     console.log(selectedPhotos);
     console.log("invoking getselected");
 
