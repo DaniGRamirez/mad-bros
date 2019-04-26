@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/logoredandwhite.eab043a3.png"
   },
   {
-    "revision": "dd0e6e9689f73340c184",
+    "revision": "2dce330d7ae6f17bcc17",
     "url": "/static/css/main.b1ba3367.chunk.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = [
     "url": "/static/media/LogoInstaBN.6974b5f9.png"
   },
   {
-    "revision": "84ad80845c03eb14153e",
-    "url": "/static/js/2.74b68013.chunk.js"
+    "revision": "3d4ac15bf73dc39512c1",
+    "url": "/static/js/2.a047e502.chunk.js"
   },
   {
     "revision": "391776efae76b37ea9ecbd2dcb343528",
     "url": "/static/media/LogoInstaInvertido.391776ef.png"
   },
   {
-    "revision": "dd0e6e9689f73340c184",
-    "url": "/static/js/main.adfdb034.chunk.js"
+    "revision": "2dce330d7ae6f17bcc17",
+    "url": "/static/js/main.6cc20468.chunk.js"
   },
   {
     "revision": "61d52a68cfb7c00c8a30a73c1937ce0f",
@@ -40,11 +40,11 @@ self.__precacheManifest = [
     "url": "/static/media/Marcos.36b0616e.jpg"
   },
   {
-    "revision": "84ad80845c03eb14153e",
+    "revision": "3d4ac15bf73dc39512c1",
     "url": "/static/css/2.5f31d337.chunk.css"
   },
   {
-    "revision": "334f9234f596fd9a0eb3c691975062a6",
+    "revision": "761a3b88367c68823632cee26201cf65",
     "url": "/index.html"
   }
 ];
