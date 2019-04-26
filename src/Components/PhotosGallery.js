@@ -11,6 +11,13 @@ import sizeOf from 'image-size';
   function getSelectedPhotos()
   {       
     selectedPhotos.length = 0;
+    // selectedPhotos.push(
+    //   {
+    //     src: '/img/' + "Foto2.jpg",         
+    //     width: 2,
+    //     height: 3
+    //   }
+    // )
     AddPhotosInFolder("1_1",1,1,1);
     AddPhotosInFolder("3_2",3,2,12);
     AddPhotosInFolder("2_3",2,3,2);            
@@ -47,7 +54,7 @@ import sizeOf from 'image-size';
       let indexPhoto = index+1;
       selectedPhotos.push(
       {        
-        src: '../img/' + folder + "/"+ "Foto" + indexPhoto + ".jpg",         
+        src: 'img/' + folder + "/"+ "Foto" + indexPhoto + ".jpg",         
         width: _width,
         height: _height
       }    
