@@ -1,7 +1,7 @@
 import React, {Component,Fragment} from 'react';
 import './Home.css';
 import photoMain from '../img/foto-8.jpg';
-import './InstaFeed';
+// import './InstaFeed';
 
 
 class Home extends Component {   
