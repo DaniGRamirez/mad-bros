@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './About.css';
+import photoDani from '../ImgUs/Dani.jpg';
+import photoMarcos from '../ImgUs/Marcos.jpg';
 
 class About extends Component {   
 
@@ -7,18 +9,20 @@ class About extends Component {
       return(         
         <div className="mainContainer">   
           <div className="usContainer">
-            <img className="usItem" src="http://lorempixel.com/256/256"></img>            
+            <img className="usItem imgUs" src={photoMarcos}></img>            
             <div className="usItem" id="usText">
-              <h1>Quien coño somos</h1>
-              <p>Esto es el parrafo para el about sobre nosotros, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              Esto es el parrafo para el about sobre nosotros, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              </p>
+              <h1>Quiénes somos ?</h1>
+              <p>Mad Bros esta formado por Dani y Marcos García Ramírez, dos hermanos residentes en Madrid.</p>            
+              <p>Después de varios años de experiencia desarrolando la cuenta de instagram   
+                <a id="linkInstaLife" target="_blank" href="https://www.instagram.com/lifeinredandwhite/?hl=es">@lifeinredandwhite</a>
+                nos hemos profesionalizado para llevar nuestras ideas y experiencia a todo aquel que quiera mejorar su imagen
+                o la de su producto.</p>
             </div>     
-            <img className="usItem" src="http://lorempixel.com/256/256"></img>                  
+            <img className="usItem imgUs" src={photoDani}></img>                  
           </div>    
-          <div className="madBrosImgContainer">           
-            <img id="madBrosImg" src="http://lorempixel.com/1024/1024"></img>            
-          </div>                       
+          {/* <div className="madBrosImgContainer">           
+            <img id="madBrosImg" src={photoDani}></img>            
+          </div>                        */}
         </div>        
         
           ); 

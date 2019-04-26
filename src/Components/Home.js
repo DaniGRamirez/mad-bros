@@ -13,9 +13,11 @@ class Home extends Component {
                 <img src={photoMain}/>
             </div>
             <div className="quoteContainer">            
-                <h1>"Too fast to live, too young to die"</h1>                         
-            </div>
-            <div className="powr-instagram-feed" id="d9174698_1553704120"></div>           
+                <h1>"Mejoramos tu imagen personal y la de tu producto"</h1>                         
+            </div>             
+            <div className= "InstaFeed">              
+              <div className="powr-instagram-feed" id="d9174698_1553704120"></div>
+            </div>     
         </div>        
           ); 
   }   

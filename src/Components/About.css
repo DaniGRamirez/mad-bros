@@ -45,6 +45,19 @@ border-radius: 50%}
     text-align: center;
 }
 
+.imgUs{
+    width: 15rem;
+    height: 15rem;
+}
+
+#linkInstaLife{
+    font-size: 1.25rem;
+}
+
+#linkInstaLife:hover{
+    color: black;
+}
+
 @media only screen and (max-width: 1250px) {
     .usContainer {   
         flex-direction: row;   
@@ -63,8 +76,7 @@ border-radius: 50%}
     }
 
     .usItem:nth-child(1) { 
-       order: 2;
-       border-radius: 0px;
+       order: 2;      
        margin-left: 25px;
       }
   }

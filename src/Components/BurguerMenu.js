@@ -41,10 +41,10 @@ class BurguerMenu extends Component {
         <div>           
             <Menu right width="100%" isOpen={this.state.menuOpen}
             onStateChange={(state) => this.handleStateChange(state)}>           
-              <Link to="/Home" onClick={() => this.closeMenu()} >Home</Link>    
-              <Link to="/Photos" onClick={() => this.closeMenu()} >Photos</Link>                  
-              <Link to="/About" onClick={() => this.closeMenu()}>About</Link>  
-              <Link to="/Contact" onClick={() => this.closeMenu()}>Contact</Link>              
+              <Link to="/" onClick={() => this.closeMenu()} >Inicio</Link>    
+              <Link to="/Photos" onClick={() => this.closeMenu()} >Fotos</Link>                  
+              <Link to="/About" onClick={() => this.closeMenu()}>Nosotros</Link>  
+              <Link to="/Contact" onClick={() => this.closeMenu()}>Contacto</Link>              
               <a target="blank" onClick={() => this.closeMenu()} className="menu-item--small" href="https://www.instagram.com/lifeinredandwhite/?hl=es">
                 <img id="logoInsta" alt="logo" src = {logoInstagram}></img>
               </a>             

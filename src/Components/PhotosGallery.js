@@ -6,57 +6,30 @@ import logoInstagram from '../img/LogoInstaBN.png';
 import sizeOf from 'image-size';
 // var sizeOf = require('image-size');
 
-
-const photos = [
-    {
-      src: 'https://picsum.photos/1920/1080', 
-      width: 3,
-      height: 2
-    },
-    {
-      src: 'LogoInstaBN.png',   
-      // src: "/static/media/LogoInstaInvertido.391776ef.png"
-      width:1,    
-      height:1, 
-    },
-    {
-      src: 'https://picsum.photos/200/200',   
-      width: 2,
-      height: 2 
-    },
-    {
-      src: 'https://picsum.photos/500/500', 
-      width: 2,
-      height: 2
-    }
-  ];   
-
   const selectedPhotos = []; 
 
   function getSelectedPhotos()
-  {
-    let numberPhotos = 15;
-    for (let index = 0; index < numberPhotos; index++) {            
-      let indexPhoto = index+1;
-      selectedPhotos [index] = 
-      {
-        
-        src: '../img/' + "foto-" + indexPhoto + ".jpg",         
-        width: 3,
-        height: 2
-      }
-      // var dimensions = sizeOf('../img/LogoInstaBN.png');
-      // console.log(dimensions.width, dimensions.height);
-      // selectedPhotos[index].width = dimensions.width/1000;
-      // selectedPhotos[index].height = dimensions.height/1000;
-    }  
-
-    changeDimensions([0,3],2,3);
-    changeDimensions([1],1,1);
-    changeDimensions([5],1.2,1);    
+  {       
+    selectedPhotos.length = 0;
+    AddPhotosInFolder("1_1",1,1,1);
+    AddPhotosInFolder("3_2",3,2,12);
+    AddPhotosInFolder("2_3",2,3,2);            
+    AddPhotosInFolder("4_3",4,3,2);      
+    AddPhotosInFolder("3_4",3,4,0);      
+    AddPhotosInFolder("5_4",5,4,1);    
+    shuffle(selectedPhotos);
     console.log(selectedPhotos);
     console.log("invoking getselected");
+
   };
+
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
 
   function changeDimensions(indexToChange,_width,_heigth)
   {       
@@ -67,6 +40,21 @@ const photos = [
     });    
   }  
 
+  function AddPhotosInFolder(folder,_width,_height,_number_of_photos)
+  {
+    selectedPhotos.push();    
+    for (let index = 0; index < _number_of_photos; index++) {            
+      let indexPhoto = index+1;
+      selectedPhotos.push(
+      {        
+        src: '../img/' + folder + "/"+ "Foto" + indexPhoto + ".jpg",         
+        width: _width,
+        height: _height
+      }    
+      )
+    }  
+  }
+
 class GalleryTest extends Component {
 
   constructor() {
@@ -75,7 +63,7 @@ class GalleryTest extends Component {
     this.closeLightbox = this.closeLightbox.bind(this);
     this.openLightbox = this.openLightbox.bind(this);
     this.gotoNext = this.gotoNext.bind(this);
-    this.gotoPrevious = this.gotoPrevious.bind(this);
+    this.gotoPrevious = this.gotoPrevious.bind(this);    
     getSelectedPhotos();
   }
   openLightbox(event, obj) {

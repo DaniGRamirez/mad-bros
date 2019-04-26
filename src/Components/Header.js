@@ -25,15 +25,15 @@ class Header extends Component {
         navBar =  
         <div>
             <div className="navs">                               
-                <Link to="/Photos" >Photos</Link>                  
-                <Link to="/About" >About</Link>  
-                <Link to="/Contact" >Contact</Link>                                 
+                <Link to="/Photos" >Fotos</Link>                  
+                <Link to="/About" >Nosotros</Link>  
+                <Link to="/Contact" >Contacto</Link>                                 
             </div>                
         </div>
 
         socialIcons =   
         <div className="socialNavIcons">
-            <a target="blank" className="menu-item--small" href="https://www.instagram.com/lifeinredandwhite/?hl=es">            
+            <a target="blank" className="menu-item--small" href="https://www.instagram.com/madbros.spain/">            
                 <img className="logoInstaHeader" alt="logo" src = {logoInstagram}></img>                        
             </a>               
         </div>
