@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './About.css';
-import photoDani from '../img/Dani.jpg';
-import photoMarcos from '../img/Marcos.jpg';
+// import photoDani from '../img/Dani.jpg';
+// import photoMarcos from '../img/Marcos.jpg';
 
 class About extends Component {   
 
@@ -9,7 +9,7 @@ class About extends Component {
       return(         
         <div className="mainContainer">   
           <div className="usContainer">
-            <img className="usItem imgUs" src={photoMarcos}></img>            
+            {/* <img className="usItem imgUs" src={photoMarcos}></img>             */}
             <div className="usItem" id="usText">
               <h1>Quiénes somos ?</h1>
               <p>Mad Bros esta formado por Dani y Marcos García Ramírez, dos hermanos residentes en Madrid.</p>            
@@ -18,7 +18,7 @@ class About extends Component {
                 nos hemos profesionalizado para llevar nuestras ideas y experiencia a todo aquel que quiera mejorar su imagen
                 o la de su producto.</p>
             </div>     
-            <img className="usItem imgUs" src={photoDani}></img>                  
+            {/* <img className="usItem imgUs" src={photoDani}></img>                   */}
           </div>    
           {/* <div className="madBrosImgContainer">           
             <img id="madBrosImg" src={photoDani}></img>            
