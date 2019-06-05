@@ -4,43 +4,23 @@ import Lightbox from 'react-images';
 import './PhotosGallery.css';
 import logoInstagram from '../img/LogoInstaBN.png';
 import sizeOf from 'image-size';
-// var sizeOf = require('image-size');
 
   const selectedPhotos = []; 
 
-  function getSelectedPhotos()
+  function getSelectedPhotos(categoriesSelected)
   {       
-    selectedPhotos.length = 0;
-    // selectedPhotos.push(
-    //   {
-    //     src: '/img/' + "Foto2.jpg",         
-    //     width: 2,
-    //     height: 3
-    //   }
-    // )
+    selectedPhotos.length = 0;    
 
-    // selectedPhotos.push(
-    //   {
-    //     src: '../img/test/' + "Foto2.jpg",         
-    //     width: 2,
-    //     height: 3
-    //   }
-    // )
+    for (let i = 0; i < categoriesSelected.length; i++) {
+     
+      AddPhotosInFolder(categoriesSelected[i].name+"/1_1",1,1,categoriesSelected[i].folder_1_1);
+      AddPhotosInFolder(categoriesSelected[i].name+"/3_2",3,2,categoriesSelected[i].folder_3_2);
+      AddPhotosInFolder(categoriesSelected[i].name+"/2_3",2,3,categoriesSelected[i].folder_2_3);            
+      AddPhotosInFolder(categoriesSelected[i].name+"/4_3",4,3,categoriesSelected[i].folder_4_3);      
+      AddPhotosInFolder(categoriesSelected[i].name+"/3_4",3,4,categoriesSelected[i].folder_3_4);      
+      AddPhotosInFolder(categoriesSelected[i].name+"/5_4",5,4,categoriesSelected[i].folder_5_1);    
+    } 
 
-    // selectedPhotos.push(
-    //   {
-    //     src: '../img/' + "Foto2.jpg",         
-    //     width: 2,
-    //     height: 3
-    //   }
-    // )
-
-    AddPhotosInFolder("1_1",1,1,1);
-    AddPhotosInFolder("3_2",3,2,12);
-    AddPhotosInFolder("2_3",2,3,2);            
-    AddPhotosInFolder("4_3",4,3,2);      
-    AddPhotosInFolder("3_4",3,4,0);      
-    AddPhotosInFolder("5_4",5,4,1);    
     shuffle(selectedPhotos);
     console.log(selectedPhotos);
     console.log("invoking getselected");
@@ -65,7 +45,7 @@ import sizeOf from 'image-size';
   }  
 
   function AddPhotosInFolder(folder,_width,_height,_number_of_photos)
-  {
+  {        
     //selectedPhotos.push();    
     for (let index = 0; index < _number_of_photos; index++) {            
       let indexPhoto = index+1;
@@ -79,16 +59,35 @@ import sizeOf from 'image-size';
     }  
   }
 
+  var categories = 
+  [
+    {
+       name: "Sport",
+       icon: "All", 
+       folder_1_1: 0,   
+       folder_3_2: 6,
+       folder_2_2: 0,
+       folder_4_3: 0,
+       folder_3_4: 0,
+       folder_5_4: 0,     
+    },  
+  ]
+
 class GalleryTest extends Component {
 
   constructor() {
     super();
-    this.state = { currentImage: 0 };
+    //console.log("Gallery - selcetd " + this.props.categoriesSelected);
+    this.state = 
+    {
+       currentImage: 0 
+       
+      };
     this.closeLightbox = this.closeLightbox.bind(this);
     this.openLightbox = this.openLightbox.bind(this);
     this.gotoNext = this.gotoNext.bind(this);
     this.gotoPrevious = this.gotoPrevious.bind(this);    
-    getSelectedPhotos();
+    getSelectedPhotos(categories);    
   }
   openLightbox(event, obj) {
     this.setState({

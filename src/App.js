@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header'
 import Contact from './Components/Contact'
 import PhotoGallery from './Components/PhotosGallery';
+import Photos from './Components/Photos';
 import Home from './Components/Home';
 import About from './Components/About'
 import BurguerMenu from './Components/BurguerMenu';
@@ -49,7 +50,7 @@ constructor(props) {
         <Header isDesktop={this.state.isDesktop}/>      
         {navBurguerMenu}
         <Route exact path='/' component={Home}/> 
-        <Route exact path='/Photos' component={PhotoGallery}/>        
+        <Route exact path='/Photos' component={Photos}/>        
         <Route exact path='/About' component={About}/>  
         <Route exact path='/Contact' component={SimpleContact}/>   
       </div>
