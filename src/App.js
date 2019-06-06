@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import {connect} from 'react-redux';
 import Header from './Components/Header'
 import Contact from './Components/Contact'
 import PhotoGallery from './Components/PhotosGallery';
@@ -14,6 +15,20 @@ import{
   Route,  
 } from "react-router-dom"
 
+import {setCategory} from './Actions.js'
+
+const mapStateToProps = state =>{ 
+  console.log(state.categorySelected);
+  return {    
+    categorySelected: state.categorySelected
+  }
+}
+
+// const mapDispatchToProps = (dispatch) =>{
+//      return dispatch(setCategory("Text"));
+// //  (event) => dispatch(setCategory("Test1"))
+// }
+
 class App extends Component {
 constructor(props) {
     super(props);
@@ -23,14 +38,17 @@ constructor(props) {
 
     this.updatePredicate = this.updatePredicate.bind(this);
   }
-  componentDidMount() {
-    this.updatePredicate();
-    window.addEventListener("resize", this.updatePredicate);
-  }
+    componentDidMount() {
+      console.log("Mount in App");
+      console.log(this.props.store);
+      this.updatePredicate();
+      window.addEventListener("resize", this.updatePredicate);
+      console.log(this.props);
+    }
 
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updatePredicate);
-  }
+    componentWillUnmount() {
+      window.removeEventListener("resize", this.updatePredicate);
+    }
 
   updatePredicate() {
     // console.log(window.innerWidth);
@@ -42,9 +60,10 @@ constructor(props) {
     if(this.state.isDesktop === false)        
       navBurguerMenu = <BurguerMenu/>;
     else
-      navBurguerMenu = ""
+      navBurguerMenu = ""  
 
-    return (
+      console.log(this.props); 
+    return (     
       <Router>
       <div>
         <Header isDesktop={this.state.isDesktop}/>      
@@ -59,4 +78,5 @@ constructor(props) {
   }
 }
 
-export default App;
+export default connect(mapStateToProps,null)(App);
+//export default App;

@@ -9,6 +9,9 @@ import sizeOf from 'image-size';
 
   function getSelectedPhotos(categoriesSelected)
   {       
+    if(categoriesSelected.length == 0)
+      return;
+
     selectedPhotos.length = 0;    
 
     for (let i = 0; i < categoriesSelected.length; i++) {
@@ -45,8 +48,7 @@ import sizeOf from 'image-size';
   }  
 
   function AddPhotosInFolder(folder,_width,_height,_number_of_photos)
-  {        
-    //selectedPhotos.push();    
+  {            
     for (let index = 0; index < _number_of_photos; index++) {            
       let indexPhoto = index+1;
       selectedPhotos.push(
@@ -59,25 +61,10 @@ import sizeOf from 'image-size';
     }  
   }
 
-  var categories = 
-  [
-    {
-       name: "Sport",
-       icon: "All", 
-       folder_1_1: 0,   
-       folder_3_2: 6,
-       folder_2_2: 0,
-       folder_4_3: 0,
-       folder_3_4: 0,
-       folder_5_4: 0,     
-    },  
-  ]
-
 class GalleryTest extends Component {
 
   constructor() {
-    super();
-    //console.log("Gallery - selcetd " + this.props.categoriesSelected);
+    super();    
     this.state = 
     {
        currentImage: 0 
@@ -87,8 +74,15 @@ class GalleryTest extends Component {
     this.openLightbox = this.openLightbox.bind(this);
     this.gotoNext = this.gotoNext.bind(this);
     this.gotoPrevious = this.gotoPrevious.bind(this);    
-    getSelectedPhotos(categories);    
   }
+  
+  componentDidMount() {   
+    console.log("Mount in photos"); 
+    console.log(this.props.categoriesSelected);
+    getSelectedPhotos(this.props.categoriesSelected);    
+    //this.props.setCategory("Photos");
+  }
+
   openLightbox(event, obj) {
     this.setState({
       currentImage: obj.index,
@@ -112,18 +106,30 @@ class GalleryTest extends Component {
     });
   }
 
-  render(){
-      return(     
-        <div className = "GalleryDiv">
-        <Gallery photos={selectedPhotos}  columns="3" onClick={this.openLightbox} direction={"column"} />
-        <Lightbox images={selectedPhotos}
+  drawGallery()
+  {
+    if(selectedPhotos.length != 0)
+    {
+      return(        
+        <div>
+          <Gallery photos={selectedPhotos}  columns="3" onClick={this.openLightbox} direction={"column"} />
+          <Lightbox images={selectedPhotos}
           onClose={this.closeLightbox}
           onClickPrev={this.gotoPrevious}
           onClickNext={this.gotoNext}
           currentImage={this.state.currentImage}
           isOpen={this.state.lightboxIsOpen}
         />
-      </div>
+        </div>        
+      )
+    }
+  }
+
+  render(){
+      return(     
+        <div className = "GalleryDiv">
+        {this.drawGallery}
+        </div>
       ) 
   }   
 }
