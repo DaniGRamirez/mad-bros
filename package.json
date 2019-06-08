@@ -27,7 +27,7 @@
     "redux": "^4.0.1",
     "tachyons": "^4.11.1",
     "typekit": "^0.1.1"
-  },  
+  },
   "scripts": {
     "start_react": "react-scripts start",
     "start": "node server.js",

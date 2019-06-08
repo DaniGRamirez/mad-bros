@@ -20,5 +20,6 @@ yarn-debug.log*
 yarn-error.log*
 
 src/*
+public/*
 /static/css/*.map
 build/static/js/*.map
