@@ -10,8 +10,8 @@ import 'tachyons';
 import { changeCategory } from './Reducers';
 
 const store = createStore(changeCategory);
-console.log("index - ");
-console.log(store);
+// console.log("index - ");
+// console.log(store);
 //export default store;
 
 ReactDOM.render(

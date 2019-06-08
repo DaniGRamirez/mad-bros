@@ -25,7 +25,8 @@
     flex-wrap: wrap; 
     align-items: center;
     align-content: center;
-    justify-content: center;            
+    justify-content: center;      
+    width: 90%;      
 
 }
 
@@ -41,7 +42,7 @@ border-radius: 50%}
 }
 
 .usItem p{
-    max-width: 450px;
+    max-width: 350px;
     text-align: center;
 }
 
@@ -50,8 +51,17 @@ border-radius: 50%}
     height: 15rem;
 }
 
+#usText p {           
+    font-size: 0.8em;
+ }
+
+
+#usText h1 {           
+    font-size: 1.5em;
+ }
+
 #linkInstaLife{
-    font-size: 1.25rem;
+    font-size: 1.25em;
 }
 
 #linkInstaLife:hover{
@@ -72,7 +82,7 @@ border-radius: 50%}
     }
 
     #usText{           
-       flex-basis: 100%;
+       flex-basis: 90%;
     }
 
     .usItem:nth-child(1) { 

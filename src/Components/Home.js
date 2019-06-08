@@ -9,6 +9,7 @@ class Home extends Component {
   render(){  
       return(         
         <div>           
+            <script src="https://www.powr.io/powr.js?platform=web"></script>
             <div className="fullImage">
                 <img src={photoMain}/>
             </div>

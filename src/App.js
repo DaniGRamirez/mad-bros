@@ -18,7 +18,7 @@ import{
 import {setCategory} from './Actions.js'
 
 const mapStateToProps = state =>{ 
-  console.log(state.categorySelected);
+  // console.log(state.categorySelected);
   return {    
     categorySelected: state.categorySelected
   }
@@ -39,11 +39,11 @@ constructor(props) {
     this.updatePredicate = this.updatePredicate.bind(this);
   }
     componentDidMount() {
-      console.log("Mount in App");
-      console.log(this.props.store);
+      // console.log("Mount in App");
+      // console.log(this.props.store);
       this.updatePredicate();
       window.addEventListener("resize", this.updatePredicate);
-      console.log(this.props);
+      // console.log(this.props);
     }
 
     componentWillUnmount() {
@@ -60,9 +60,7 @@ constructor(props) {
     if(this.state.isDesktop === false)        
       navBurguerMenu = <BurguerMenu/>;
     else
-      navBurguerMenu = ""  
-
-      console.log(this.props); 
+      navBurguerMenu = ""        
     return (     
       <Router>
       <div>
