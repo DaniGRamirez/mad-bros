@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
 import {connect} from 'react-redux';
-import Header from './Components/Header'
-import Contact from './Components/Contact'
-import PhotoGallery from './Components/PhotosGallery';
-import Photos from './Components/Photos';
-import Home from './Components/Home';
-import About from './Components/About'
-import BurguerMenu from './Components/BurguerMenu';
-import SimpleContact from './Components/SimpleContact';
+import Header from './components/Header'
+import Contact from './components/Contact'
+import PhotoGallery from './components/PhotosGallery';
+import Photos from './components/Photos';
+import Home from './components/Home';
+import About from './components/About'
+import BurguerMenu from './components/BurguerMenu';
+import SimpleContact from './components/SimpleContact';
 
 import{
   BrowserRouter as Router,
   Route,  
 } from "react-router-dom"
 
-import {setCategory} from './Actions.js'
+import {setCategory} from './redux/Actions.js'
 
 const mapStateToProps = state =>{ 
   // console.log(state.categorySelected);

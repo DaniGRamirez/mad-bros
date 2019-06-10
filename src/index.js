@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 
 import * as serviceWorker from './serviceWorker';
-import { changeCategory } from './Reducers';
+import { changeCategory } from './redux/Reducers';
 
 const store = createStore(changeCategory);
 // console.log("index - ");
