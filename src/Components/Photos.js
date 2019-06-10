@@ -28,7 +28,7 @@ var categories =
     folder_1_1: 1,   
     folder_2_3: 2,
     folder_3_2: 6,
-    folder_4_3: 2,
+    folder_4_3: 1,
     folder_3_4: 0,
     folder_5_4: 2,     
  },   
