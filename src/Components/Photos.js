@@ -54,7 +54,7 @@ var category_all =
 
 
 const mapStateToProps = state =>{   
-  console.log("MapState in photos");  
+  // console.log("MapState in photos");  
   return {    
     categorySelected: state.categorySelected
   }
@@ -105,14 +105,18 @@ class Photos extends Component {
   {
     super();         
     this.onCategoriesChanged = this.onCategoriesChanged.bind(this);
+    // console.log("Constructor");
+    SetCategories("All");
+    getSelectedPhotos(categories_selected);  
   }
     
   onCategoriesChanged(new_category)
   {   
+    console.log("Categorie changed");
     SetCategories(new_category);
     getSelectedPhotos(categories_selected);   
-    console.log("OncategoriesChanged");
-    console.log(categories_selected)
+    // console.log("OncategoriesChanged");
+    // console.log(categories_selected)
   }
 
   CategoriesElements = categories.map((user,i) =>
@@ -120,18 +124,17 @@ class Photos extends Component {
     return <CategoryElement key={i} CategoryInfo={categories[i]} onCategoriesChanged = {this.onCategoriesChanged}></CategoryElement>      
   }) 
 
-    componentDidMount() {   
-      this.onCategoriesChanged();
+    componentDidMount() {        
       SetCategories(this.props.categorySelected);
       getSelectedPhotos(categories_selected);  
-       console.log("Mount in photos");
+       console.log("DID Mount in photos");
       //  console.log(this.props.categorySelected);               
       // console.log(selectedPhotos);
   }  
 
   componentDidUpdate(){
-    console.log("Compoenent did update Photos");
-    console.log(this.props);  
+    // console.log("Compoenent did update Photos");
+    // console.log(this.props);  
   }
 
   render(){      

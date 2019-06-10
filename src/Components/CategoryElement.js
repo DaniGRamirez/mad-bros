@@ -29,7 +29,7 @@ class CategoryElement extends Component {
     DoLogicOnClick()          
     {                    
       const action_change = this.props.onCategoriesChanged.bind(this);
-      console.log("click on " + this.props.CategoryInfo.id);
+      //console.log("click on " + this.props.CategoryInfo.id);
       const action = setCategory(this.props.CategoryInfo.id);      
       action_change(this.props.CategoryInfo.id);
       this.props.dispatch(action);  
