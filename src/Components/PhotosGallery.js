@@ -3,7 +3,6 @@ import Gallery from "react-photo-gallery";
 import Lightbox from 'react-images';
 import './PhotosGallery.css';
 import logoInstagram from '../img/LogoInstaBN.png';
-import sizeOf from 'image-size';
 
 class GalleryTest extends Component {
 

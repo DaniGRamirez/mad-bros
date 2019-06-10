@@ -6,7 +6,6 @@ import './index.css';
 import App from './App';
 
 import * as serviceWorker from './serviceWorker';
-import 'tachyons';
 import { changeCategory } from './Reducers';
 
 const store = createStore(changeCategory);
