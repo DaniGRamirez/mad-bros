@@ -22,6 +22,7 @@ class GalleryTest extends Component {
   componentDidMount() {   
     // console.log("Mount in Photos gallery did"); 
     // console.log(this.props.categoriesSelected);  
+    
   }
 
   openLightbox(event, obj) {
@@ -47,6 +48,14 @@ class GalleryTest extends Component {
     });
   }
 
+  desiredColumns()
+  {
+   if(window.innerWidth < 400) 
+   return 2;
+   else 
+   return 3;
+  }
+
   drawGallery()
   {
     // console.log("DrawGallery");
@@ -55,7 +64,7 @@ class GalleryTest extends Component {
     {     
       return(        
         <div>
-          <Gallery photos={this.props.selectedPhotos}  columns={3} onClick={this.openLightbox} direction={"column"} />
+          <Gallery photos={this.props.selectedPhotos}  columns={this.desiredColumns} onClick={this.openLightbox} direction={"column"} />
             <Lightbox images={this.props.selectedPhotos}
             onClose={this.closeLightbox}
             onClickPrev={this.gotoPrevious}
