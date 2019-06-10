@@ -57,14 +57,14 @@ const mapStateToProps = state =>{
   return {    
     categorySelected: state.categorySelected
   }
+  console.log("MapState in photos");
 }
 
 var categories_selected = [];
 
 function SetCategories(_categorySelected)
 {  
-  categories_selected = [];
-   console.log("Debug category selcted");
+  categories_selected = [];   
   // console.log(_categorySelected);
   switch(_categorySelected)
   {
@@ -90,24 +90,26 @@ function SetCategories(_categorySelected)
   return <h1></h1>;
 }
 
-const CategoriesElements = categories.map((user,i) =>
-{          
-  return <CategoryElement key={i} CategoryInfo={categories[i]} onCategoriesChanged = {onCategoriesChanged}></CategoryElement>      
-})
+
 
 class Photos extends Component {   
-     
-    constructor()
-    {
-      super();         
-      this.onCategoriesChanged = this.updatePredicate.bind(this);
-    }
-       
-    onCategoriesChanged()
-    {
-      SetCategories(this.props.categorySelected);
-      getSelectedPhotos(categories_selected);
-    }
+      
+  constructor()
+  {
+    super();         
+    this.onCategoriesChanged = this.onCategoriesChanged.bind(this);
+  }
+  
+  onCategoriesChanged()
+  {    
+    SetCategories(this.props.categorySelected);
+    getSelectedPhotos(categories_selected);
+  }
+
+  CategoriesElements = categories.map((user,i) =>
+  {          
+    return <CategoryElement key={i} CategoryInfo={categories[i]} onCategoriesChanged = {this.onCategoriesChanged}></CategoryElement>      
+  })
 
     componentDidMount() {   
       this.onCategoriesChanged();
@@ -124,7 +126,7 @@ class Photos extends Component {
         <div>                   
             <div className="navCategories">  
                 <CategoryElement CategoryInfo={category_all} onCategoriesChanged = {this.onCategoriesChanged}></CategoryElement>       
-                {CategoriesElements}               
+                {this.CategoriesElements}               
             </div>                                  
             <PhotoGallery selectedPhotos = {selectedPhotos} ></PhotoGallery>
         </div>        
