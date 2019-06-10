@@ -5,7 +5,7 @@ const initialState = {
 }
 
 export const changeCategory = (state=initialState,action={}) => {  
-    // console.log("Reducer changeCategory");
+     console.log("Reducer changeCategory");
     // console.log(action.payload);
     // console.log(action);
     // console.log("...");

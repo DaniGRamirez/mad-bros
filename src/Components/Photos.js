@@ -54,11 +54,18 @@ var category_all =
 
 
 const mapStateToProps = state =>{   
+  console.log("MapState in photos");  
   return {    
     categorySelected: state.categorySelected
   }
-  console.log("MapState in photos");
 }
+
+// const mapDispatchToProps = (dispatch, ownProps) => {
+//   console.log("Dispatch to props");
+//   console.log(ownProps);
+//   console.log(dispatch);
+//   return({});
+// }
 
 var categories_selected = [];
 
@@ -99,28 +106,37 @@ class Photos extends Component {
     super();         
     this.onCategoriesChanged = this.onCategoriesChanged.bind(this);
   }
-  
-  onCategoriesChanged()
-  {    
-    SetCategories(this.props.categorySelected);
-    getSelectedPhotos(categories_selected);
+    
+  onCategoriesChanged(new_category)
+  {   
+    SetCategories(new_category);
+    getSelectedPhotos(categories_selected);   
+    console.log("OncategoriesChanged");
+    console.log(categories_selected)
   }
 
   CategoriesElements = categories.map((user,i) =>
   {          
     return <CategoryElement key={i} CategoryInfo={categories[i]} onCategoriesChanged = {this.onCategoriesChanged}></CategoryElement>      
-  })
+  }) 
 
     componentDidMount() {   
       this.onCategoriesChanged();
-      // console.log("Mount in photos");
+      SetCategories(this.props.categorySelected);
+      getSelectedPhotos(categories_selected);  
+       console.log("Mount in photos");
       //  console.log(this.props.categorySelected);               
       // console.log(selectedPhotos);
   }  
 
+  componentDidUpdate(){
+    console.log("Compoenent did update Photos");
+    console.log(this.props);  
+  }
+
   render(){      
 
-    // console.log("Props photo -");
+     console.log("Render Phostos");
     // console.log(this.props);
       return(        
         <div>                   
@@ -134,5 +150,5 @@ class Photos extends Component {
   }   
 }
 
-export default connect(mapStateToProps,setCategory)(Photos);
+export default connect(mapStateToProps,null)(Photos);
 //export default Photos;
