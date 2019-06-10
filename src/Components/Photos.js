@@ -90,11 +90,6 @@ function SetCategories(_categorySelected)
   return <h1></h1>;
 }
 
-function onCategoriesChanged()
-{
-  // console.log("Categorie has changed");
-}
-
 const CategoriesElements = categories.map((user,i) =>
 {          
   return <CategoryElement key={i} CategoryInfo={categories[i]} onCategoriesChanged = {onCategoriesChanged}></CategoryElement>      
@@ -105,9 +100,17 @@ class Photos extends Component {
     constructor()
     {
       super();         
+      this.onCategoriesChanged = this.updatePredicate.bind(this);
     }
        
+    onCategoriesChanged()
+    {
+      SetCategories(this.props.categorySelected);
+      getSelectedPhotos(categories_selected);
+    }
+
     componentDidMount() {   
+      this.onCategoriesChanged();
       // console.log("Mount in photos");
       //  console.log(this.props.categorySelected);               
       // console.log(selectedPhotos);
@@ -117,8 +120,6 @@ class Photos extends Component {
 
     // console.log("Props photo -");
     // console.log(this.props);
-    SetCategories(this.props.categorySelected);
-    getSelectedPhotos(categories_selected);
       return(        
         <div>                   
             <div className="navCategories">  
