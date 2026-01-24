@@ -5,7 +5,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.23",
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.10",
